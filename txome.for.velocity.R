@@ -91,3 +91,5 @@ write.table(
 df <- eisaR::getTx2Gene(
     grl, filepath = paste0(sequences.out,".",as.character(length),"bp_flank.tgMap.tsv")
 )
+
+invisible(file.remove(gtf))
