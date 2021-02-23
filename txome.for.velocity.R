@@ -9,6 +9,7 @@ suppressMessages(suppressWarnings(install.packages("getopt", repos = "https://cl
 suppressMessages(suppressWarnings(install.packages("optparse", repos = "https://cloud.r-project.org/")))
 if (!requireNamespace("BiocManager", quietly = TRUE))
     suppressMessages(suppressWarnings(install.packages("BiocManager", repos = "https://cloud.r-project.org/")))
+suppressMessages(suppressWarnings(BiocManager::install("rtracklayer", quiet = TRUE)))
 suppressMessages(suppressWarnings(BiocManager::install("GenomicFeatures", quiet = TRUE)))
 suppressMessages(suppressWarnings(BiocManager::install("Biostrings", quiet = TRUE)))
 suppressMessages(suppressWarnings(BiocManager::install("BSgenome", quiet = TRUE)))
@@ -91,5 +92,20 @@ write.table(
 df <- eisaR::getTx2Gene(
     grl, filepath = paste0(sequences.out,".",as.character(length),"bp_flank.tgMap.tsv")
 )
+
+gtf_df <- rtracklayer::import(gtf)
+gtf_df=as.data.frame(gtf_df)
+mt_df=unique(gtf_df[(gtf_df$seqnames=="chrM"|gtf_df$seqnames=="MT"),c("gene_id"),drop=FALSE])
+mt_df_2=as.data.frame(paste(mt_df$gene_id,"I", sep="-"))
+colnames(mt_df_2)=colnames(mt_df)
+mt_df=rbind(mt_df,mt_df_2)
+write.table(mt_df,paste0(sequences.out,".",as.character(length),"bp_flank.mtGenes.txt"),quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
+
+rrna_df=unique(gtf_df[gtf_df$gene_type=="rRNA",c("gene_id"),drop=FALSE])
+rrna_df_2=as.data.frame(paste(rrna_df$gene_id,"I", sep="-"))
+colnames(rrna_df_2)=colnames(rrna_df)
+mt_df=rbind(rrna_df,rrna_df_2)
+write.table(rrna_df,paste0(sequences.out,".",as.character(length),"bp_flank.rrnaGenes.txt"),quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
+
 
 invisible(file.remove(gtf))
