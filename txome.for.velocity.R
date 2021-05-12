@@ -66,7 +66,8 @@ grl <- eisaR::getFeatureRanges(
 
 genome <- Biostrings::readDNAStringSet(
     genome.fa
-)
+) #The "Error in (function (x)  : attempt to apply non-function" message is expected.
+
 names(genome) <- sapply(strsplit(names(genome), " "), .subset, 1)
 seqs <- GenomicFeatures::extractTranscriptSeqs(
   x = genome, 
@@ -104,7 +105,7 @@ write.table(mt_df,paste0(sequences.out,".",as.character(length),"bp_flank.mtGene
 rrna_df=unique(gtf_df[gtf_df$gene_type=="rRNA",c("gene_id"),drop=FALSE])
 rrna_df_2=as.data.frame(paste(rrna_df$gene_id,"I", sep="-"))
 colnames(rrna_df_2)=colnames(rrna_df)
-mt_df=rbind(rrna_df,rrna_df_2)
+rrna_df=rbind(rrna_df,rrna_df_2)
 write.table(rrna_df,paste0(sequences.out,".",as.character(length),"bp_flank.rrnaGenes.txt"),quote=FALSE,row.names=FALSE,col.names=FALSE,sep="\t")
 
 
