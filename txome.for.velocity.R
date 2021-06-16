@@ -39,7 +39,7 @@ make_option("--genome", dest = "genome.fa"),
 make_option("--type", dest = "type"),
 make_option("--length", dest = "length"))
 
-opt <- parse_args(OptionParser(option_list = option_list), positional_arguments = TRUE, 
+opt <- parse_args(OptionParser(option_list = option_list), positional_arguments = TRUE,
  args = arguments)$options
 
 gtf = opt$gtf
@@ -57,10 +57,10 @@ sequences.out <- paste0(sequences.out,".velocity")
 
 grl <- eisaR::getFeatureRanges(
   gtf = gtf,
-  featureType = c("spliced", "intron"), 
-  intronType = type, 
-  flankLength = as.integer(length), 
-  joinOverlappingIntrons = FALSE, 
+  featureType = c("spliced", "intron"),
+  intronType = type,
+  flankLength = as.integer(length),
+  joinOverlappingIntrons = FALSE,
   verbose = FALSE
 )
 
@@ -70,7 +70,7 @@ genome <- Biostrings::readDNAStringSet(
 
 names(genome) <- sapply(strsplit(names(genome), " "), .subset, 1)
 seqs <- GenomicFeatures::extractTranscriptSeqs(
-  x = genome, 
+  x = genome,
   transcripts = grl
 )
 
@@ -79,13 +79,13 @@ Biostrings::writeXStringSet(
 )
 
 eisaR::exportToGtf(
-  grl, 
+  grl,
   filepath = paste0(sequences.out,".gtf")
 )
 gzip(paste0(sequences.out,".gtf"), destname=paste0(sequences.out,".",as.character(length),"bp_flank.gtf.gz"), overwrite=TRUE, remove=TRUE)
 
 write.table(
-    metadata(grl)$corrgene, 
+    metadata(grl)$corrgene,
     file = paste0(sequences.out,".",as.character(length),"bp_flank.features.tsv"),
     row.names = FALSE, col.names = TRUE, quote = FALSE, sep = "\t"
 )
