@@ -68,6 +68,10 @@ genome <- Biostrings::readDNAStringSet(
     genome.fa
 ) #The "Error in (function (x)  : attempt to apply non-function" message is expected.
 
+gtf_df <- rtracklayer::import(gtf)
+gtf_df=as.data.frame(gtf_df)
+gene_meta = distinct(gtf_df[,c("gene_id","gene_name")])
+
 names(genome) <- sapply(strsplit(names(genome), " "), .subset, 1)
 seqs <- GenomicFeatures::extractTranscriptSeqs(
   x = genome,
@@ -84,8 +88,11 @@ eisaR::exportToGtf(
 )
 gzip(paste0(sequences.out,".gtf"), destname=paste0(sequences.out,".",as.character(length),"bp_flank.gtf.gz"), overwrite=TRUE, remove=TRUE)
 
-write.table(
-    metadata(grl)$corrgene,
+splicing_meta = metadata(grl)$corrgene
+metadata_table = merge(x=splicing_meta, y=gene_meta, by.x="spliced", by.y="gene_id", all.x=TRUE)
+metadata_table = metadata_table[match(splicing_meta$spliced,metadata_table$spliced),]
+
+write.table(metadata_table,
     file = paste0(sequences.out,".",as.character(length),"bp_flank.features.tsv"),
     row.names = FALSE, col.names = TRUE, quote = FALSE, sep = "\t"
 )
@@ -94,8 +101,6 @@ df <- eisaR::getTx2Gene(
     grl, filepath = paste0(sequences.out,".",as.character(length),"bp_flank.tgMap.tsv")
 )
 
-gtf_df <- rtracklayer::import(gtf)
-gtf_df=as.data.frame(gtf_df)
 mt_df=unique(gtf_df[(gtf_df$seqnames=="chrM"|gtf_df$seqnames=="MT"),c("gene_id"),drop=FALSE])
 mt_df_2=as.data.frame(paste(mt_df$gene_id,"I", sep="-"))
 colnames(mt_df_2)=colnames(mt_df)
