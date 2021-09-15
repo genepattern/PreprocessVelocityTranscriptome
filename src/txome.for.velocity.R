@@ -2,21 +2,7 @@
 # Source: https://combine-lab.github.io/alevin-tutorial/2020/alevin-velocity/
 
 suppressPackageStartupMessages({
-library("devtools")
-})
-suppressMessages(suppressWarnings(install.packages("R.utils", repos = "https://cloud.r-project.org/")))
-suppressMessages(suppressWarnings(install.packages("getopt", repos = "https://cloud.r-project.org/")))
-suppressMessages(suppressWarnings(install.packages("optparse", repos = "https://cloud.r-project.org/")))
-suppressMessages(suppressWarnings(install.packages("dplyr", repos = "https://cloud.r-project.org/")))
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    suppressMessages(suppressWarnings(install.packages("BiocManager", repos = "https://cloud.r-project.org/")))
-suppressMessages(suppressWarnings(BiocManager::install("rtracklayer", quiet = TRUE)))
-suppressMessages(suppressWarnings(BiocManager::install("GenomicFeatures", quiet = TRUE)))
-suppressMessages(suppressWarnings(BiocManager::install("Biostrings", quiet = TRUE)))
-suppressMessages(suppressWarnings(BiocManager::install("BSgenome", quiet = TRUE)))
-suppressMessages(suppressWarnings(BiocManager::install("eisaR", quiet = TRUE)))
-
-suppressPackageStartupMessages({
+    library("devtools")
     library("getopt")
     library("optparse")
     library("R.utils")
