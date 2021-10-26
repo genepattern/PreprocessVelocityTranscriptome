@@ -53,7 +53,7 @@ p3_type=java.lang.String
 p3_value=separate\=separate;collapse\=collapse
 p4_MODE=
 p4_TYPE=Integer
-p4_default_value=90
+p4_default_value=
 p4_description=Length of sequence flanking introns to allow read alignment across unspliced junctions. Length of the flanking sequence should be chosen depending on the RNA read length, and is typically "Read Length - 1"\n<br>\nFor standard 10x Chromium Single Cell 3' v3/v3.1 chemistry the recommended value is <b>"90"</b>, for 10x Chromium Single Cell 3' v2 the recommended value is <b>"97"</b> for dual indexed 10x Chromium kits containing an i5 index, the recommended value is <b>"89"</b>
 p4_fileFormat=
 p4_flag=--length
