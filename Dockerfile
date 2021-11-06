@@ -1,11 +1,12 @@
 FROM r-base:4.0.5
-MAINTAINER Anthony S. Castanza <acastanza@ucsd.edu>
+LABEL author="Anthony S. Castanza <acastanza@ucsd.edu>"
 
 # install system dependencies
 RUN apt-get update --yes
 RUN apt-get install build-essential --yes
 RUN apt-get install libcurl4-gnutls-dev --yes
 RUN apt-get install libxml2-dev --yes
+RUN apt-get install openssl --yes
 
 USER root
 
