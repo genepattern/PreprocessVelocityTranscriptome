@@ -6,6 +6,7 @@ RUN apt-get update --yes
 RUN apt-get install build-essential --yes
 RUN apt-get install libcurl4-gnutls-dev --yes
 RUN apt-get install libxml2-dev --yes
+RUN apt-get install libssl-dev --yes
 RUN apt-get install openssl --yes
 
 USER root
