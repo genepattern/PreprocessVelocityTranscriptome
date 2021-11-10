@@ -54,7 +54,7 @@ p3_value=separate\=separate;collapse\=collapse
 p4_MODE=
 p4_TYPE=Integer
 p4_default_value=
-p4_description=Insert size/RNA read length.\n<br>\nFor standard 10x Chromium Single Cell 3' v3/v3.1 chemistry the insert size is <b>"91"</b>, for 10x Chromium Single Cell 3' v2 the insert size is <b>"98"</b> for dual indexed 10x Chromium kits containing an i5 index, the insert size is <b>"90"</b>. This value is used to determine valid alignment positions across exon-intron junctions.
+p4_description=Insert size/RNA read length.<br>For standard 10x Chromium Single Cell 3' v3/v3.1 chemistry the insert size is <b>"91"</b>, for 10x Chromium Single Cell 3' v2 the insert size is <b>"98"</b> for dual indexed 10x Chromium kits containing an i5 index, the insert size is <b>"90"</b>. This value is used to determine valid alignment positions across exon-intron junctions.
 p4_fileFormat=
 p4_flag=--length
 p4_name=Insert.Size
