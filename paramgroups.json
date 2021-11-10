@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Basic",
+        "description": "Basic parameters for preparing a transcriptome for velocity quantification.",
+        "hidden": false,
+        "parameters": [
+            "GTF",
+            "Genome.FASTA",
+            "Insert.Size"
+        ]
+    },
+    {
+        "name": "Advanced",
+        "description": "Advanced parameters for customizing the details of how sequences are extracted.",
+        "hidden": true,
+        "parameters": [
+            "Intron.Flank.Trim",
+            "Intron.Extraction",
+            "Join.Overlapping.Introns"
+        ]
+    }
+]
