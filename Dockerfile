@@ -1,4 +1,4 @@
-FROM r-base:4.0.3
+FROM r-base:4.0.5
 MAINTAINER Anthony S. Castanza <acastanza@ucsd.edu>
 
 USER root

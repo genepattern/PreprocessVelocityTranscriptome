@@ -33,7 +33,9 @@ opt <- parse_args(OptionParser(option_list = option_list), positional_arguments 
 gtf = opt$gtf
 genome.fa = opt$genome.fa
 type = opt$type ## "separate", or "collapse"
-length = opt$length ## Insert Length - 1 (default 90)
+read_length = as.integer(opt$length) ## Insert Length, used to set flank length around introns
+flank_trim_length = 1 # New tutorial uses 5, not clear why.
+flank_length = as.integer(read_length - flank_trim_length)
 
 #genome.fa.out <- gsub(basename(genome.fa), pattern=".gz$", replacement="")
 #genome.fa.out <- gsub(genome.fa.out, pattern=".fa$", replacement="")
@@ -47,8 +49,8 @@ grl <- eisaR::getFeatureRanges(
   gtf = gtf,
   featureType = c("spliced", "intron"),
   intronType = type,
-  flankLength = as.integer(length),
-  joinOverlappingIntrons = FALSE,
+  flankLength = length,
+  joinOverlappingIntrons = FALSE, # New tutorial sets = TRUE, not clear why
   verbose = FALSE
 )
 
