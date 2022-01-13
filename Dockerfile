@@ -22,7 +22,7 @@ RUN R -e "sessionInfo()"
 RUN rm -rf /tmp/downloaded_packages/
 
 RUN mkdir /module
-COPY src /module
+COPY module /module
 
 # build using this:
 # docker build -t genepattern/prepvelocitytxome:1.0 .
