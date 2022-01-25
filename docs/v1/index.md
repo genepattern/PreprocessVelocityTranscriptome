@@ -1,5 +1,6 @@
 ![](GPlogo.png)
-#PreprocessVelocityTranscriptome Documentation
+
+# PreprocessVelocityTranscriptome Documentation
 
 **Description**: Extract transcript and intron sequences from the genome sequence using the [eisaR](https://bioconductor.org/packages/release/bioc/html/eisaR.html)
 package in order to quantify both intronic (unspliced) and exonic (spliced) sequences.
