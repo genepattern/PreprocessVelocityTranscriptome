@@ -20,6 +20,7 @@ the Salmon.Indexer module.
 | GTF*          | A GTF file containing the genomic ranges to extract features from for quantification.                                                                                                                                                                                                                                                                                 |
 | Genome FASTA* | A FASTA file of the genomic sequence corresponding to the organism's GTF file.                                                                                                                                                                                                                                                                                        |
 | Insert Size*  | 	Insert size/RNA read length. For standard 10x Chromium Single Cell 3' v3/v3.1 chemistry the insert size is "**91**", for 10x Chromium Single Cell 3' v2 the insert size is "**98**" for dual indexed 10x Chromium kits containing an i5 index, the insert size is "**90**". This value is used to determine valid alignment positions across exon-intron junctions. |
+
 \* required
 
 **Advanced Parameters**:
@@ -29,6 +30,7 @@ the Salmon.Indexer module.
 | Intron Flank Trim*        | Adjusts the Insert.Size value so that reads must have at least base pair alignment to an intron in order to be quantified as an intronic alignment. Typically 1-5 basepairs. Default = 5 |
 | Intron Extraction*        | Consider transcripts separately ("separate") when extracting intronic regions, or collapsed to gene level ("collapse"). Default = separate                                               |
 | Join Overlapping Introns* | Some transcripts/genes may have intronic sequences that overlap. These overlapping sequences can be combined into a single record for quantification or be kept separate. Default = True |
+
 \* required
 <br>
 
