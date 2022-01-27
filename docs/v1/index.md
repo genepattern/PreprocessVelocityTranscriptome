@@ -11,7 +11,7 @@ package in order to quantify both intronic (unspliced) and exonic (spliced) sequ
 **Summary**: In order to build a transcriptome index for single-cell RNA velocity quantification,
 intronic (unprocessed) and exonic (processed) RNA sequences must be extracted from the
 genome. This module prepares the files necessary to produce velocity-compatible input files for
-the salmon.index module.
+the Salmon.Indexer module.
 
 **Basic Parameters**:
 
