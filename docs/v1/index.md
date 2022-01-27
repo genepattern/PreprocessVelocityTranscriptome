@@ -44,6 +44,7 @@ the Salmon.Indexer module.
 | <GTF.basename>.annotation.velocity.<Intron.Flank.Length-Intron.Flank.Trim>bp_flank.tgMap.tsv    | A two-column file containing the mappings of transcript level features to gene level features. Input for the Salmon.Alevin.Quant module.            |
 | <GTF.basename>.annotation.velocity.<Intron.Flank.Length-Intron.Flank.Trim>bp_flank.mtGenes.txt  | A list of the gene ids for mitochondrial genes. <GTF.basename>.annotation.velocity.                                                                 |
 | <Intron.Flank.Length-Intron.Flank.Trim>bp_flank.rrnaGenes.txt                                   | A list of the gene ids with the biotype “rRNA” (ribosomal RNA genes).                                                                               |
+
 <br>
 
 **Example Input**:
