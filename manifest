@@ -10,6 +10,7 @@ description=Extract transcript and intron sequences from the genome sequence usi
 documentationUrl=https\://genepattern.github.io/PreprocessVelocityTranscriptome/v1/
 fileFormat=fa;gtf;tsv
 job.docker.image=acastanza/prepvelocitytxome\:latest
+job.memory=8gb
 language=any
 name=PreprocessVelocityTranscriptome
 os=any
