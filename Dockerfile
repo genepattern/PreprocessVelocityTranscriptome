@@ -2,6 +2,7 @@ FROM r-base:4.0.5
 LABEL author="Anthony S. Castanza <acastanza@ucsd.edu> & Barbara A. Hill <bhill@broadinstitute.org>"
 
 # for install log files - check here for log files when debugging
+RUN mkdir /logs
 RUN mkdir /logs/apt-get
 
 # install system dependencies
@@ -23,19 +24,19 @@ COPY module /module
 COPY lib/*.tar.gz /module/
 #make a nonroot user here
 
-RUN R -e “install.packages((‘/module/devtools_2.4.3.tar.gz’))”
-RUN R -e “require(devtools)”
 # RUN R -e "chooseCRANmirror(ind=1); install.packages(c('R.utils','getopt','optparse','dplyr','BiocManager'))"
-RUN R -e “install_version(‘R.utils’, version = “2.11.0”, dependencies= T)”
-RUN R -e “install_version(‘getopt’, version = “1.20.3”, dependencies= T)”
-RUN R -e “install_version(‘optparse’, version = “1.7.1”, dependencies= T)”
-RUN R -e “install_version(‘dplyr’, version = “1.0.7”, dependencies= T)”
-RUN R -e “install_version(‘BiocManager’, version = “1.30.16”, dependencies= T)”
-RUN R -e "BiocManager::install('rtracklayer', version = "3.12", ask = FALSE)"
-RUN R -e "BiocManager::install('GenomicFeatures', version = "3.12", ask = FALSE)"
-RUN R -e "BiocManager::install('Biostrings', version = "3.12", ask = FALSE)"
-RUN R -e "BiocManager::install('BSgenome', version = "3.12", ask = FALSE)"
-RUN R -e "BiocManager::install('eisaR', version = "3.12", ask = FALSE)"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/R.methodsS3_1.8.1.tar.gz', repo=NULL, type='source')"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/R.oo_1.24.0.tar.gz', repo=NULL, type='source')"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/R.utils_2.11.0.tar.gz', repo=NULL, type='source')"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/getopt_1.20.3.tar.gz', repo=NULL, type='source')"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/optparse_1.7.1.tar.gz', repo=NULL, type='source')"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/dplyr_1.0.7.tar.gz', repo=NULL, type='source')"
+RUN R -e "install.packages('https://cran.r-project.org/src/contrib/BiocManager_1.30.16.tar.gz', repo=NULL, type='source')"
+RUN R -e "BiocManager::install('rtracklayer', version = '3.12', ask = FALSE)"
+RUN R -e "BiocManager::install('GenomicFeatures', version = '3.12', ask = FALSE)"
+RUN R -e "BiocManager::install('Biostrings', version = '3.12', ask = FALSE)"
+RUN R -e "BiocManager::install('BSgenome', version = '3.12', ask = FALSE)"
+RUN R -e "BiocManager::install('eisaR', version = '3.12', ask = FALSE)"
 RUN R -e "sessionInfo()"
 RUN rm -rf /tmp/downloaded_packages/
 # | tee /logs/apt-get_update.log
