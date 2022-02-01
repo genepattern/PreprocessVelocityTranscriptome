@@ -31,7 +31,9 @@ RUN R -e "install.packages('https://cran.r-project.org/src/contrib/R.methodsS3_1
     && R -e "BiocManager::install('GenomicFeatures', version = '3.12', ask = FALSE)" | tee /logs/GenomicFeatures_install.log \
     && R -e "BiocManager::install('Biostrings', version = '3.12', ask = FALSE)" | tee /logs/Biostrings_install.log \
     && R -e "BiocManager::install('BSgenome', version = '3.12', ask = FALSE)" | tee /logs/BSgenome_install.log \
-    && R -e "BiocManager::install('eisaR', version = '3.12', ask = FALSE)" | tee /logs/eisaR_install.log
+    && R -e "BiocManager::install('eisaR', version = '3.12', ask = FALSE)" | tee /logs/eisaR_install.log \
+# NB dplyr fails to install on its own, but then gets installed as a downstream dependency of GenomicFeatures
+# Also looks like Biostrings was installed as part of rtracklayer and thus skipped when directly called to be installed later
 
 RUN R -e "sessionInfo()" | tee /logs/sessionInfo_install.log
 RUN rm -rf /tmp/downloaded_packages/
