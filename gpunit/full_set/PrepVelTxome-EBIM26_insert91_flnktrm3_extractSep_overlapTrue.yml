@@ -1,0 +1,14 @@
+#lsid=urn:lsid:genepattern.org:module.analysis:00424:0.1.7
+#
+name: PrepVelTxome-EBIM26_insert91_flnktrm3_extractSep_overlapTrue
+description: EBIM26_insert91_flnktrm3_extractSep_overlapTrue
+module: PreprocessVelocityTranscriptome
+params:
+       GTF: "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M26/gencode.vM26.annotation.gtf.gz"
+       Genome.FASTA: "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M26/GRCm39.genome.fa.gz"
+       Insert.Size: "91"
+       Intron.Flank.Trim: "3"
+       Intron.Extraction: "separate"
+       Join.Overlapping.Introns: "TRUE"
+assertions:
+ jobStatus: success
