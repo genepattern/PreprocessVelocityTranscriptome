@@ -51,10 +51,10 @@ the Salmon.Indexer module.
 GTF: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M26/gencode.vM26.annotation.gtf.gz
 Genome FASTA: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_M26/GRCm39.genome.fa.gz
 
-**Module Language**: R 4.0.5\
+**Module Language**: R 4.0.5, eisaR 1.2.0 \
 **Source Repository**: [https://github.com/genepattern/PreprocessVelocityTranscriptome/releases/tag/v1](https://github.com/genepattern/PreprocessVelocityTranscriptome/releases/tag/v1) \
-**Docker image**: genepattern/prepvelocitytxome:beta
+**Docker image**: genepattern/prepvelocitytxome:1
 
-| **Version** | **Comment**           |
-|-------------|-----------------------|
-| 0.1         | Initial beta release. |
+| **Version** | **Comment**      |
+|-------------|------------------|
+| 1           | Initial release. |
