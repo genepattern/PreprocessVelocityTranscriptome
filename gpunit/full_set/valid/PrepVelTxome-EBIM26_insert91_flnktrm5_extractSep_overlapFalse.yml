@@ -13,9 +13,9 @@ params:
 assertions:
     jobStatus: success
     files:
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.fa.gz: !!null
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.gtf.gz: !!null
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.features.tsv: !!null
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.mtGenes.txt: !!null
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.rrnaGenes.txt: !!null
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.tgMap.tsv: !!null
+        gencode.vM26.annotation.velocity.86bp_flank.fa.gz: !!null
+        gencode.vM26.annotation.velocity.86bp_flank.gtf.gz: !!null
+        gencode.vM26.annotation.velocity.86bp_flank.features.tsv: !!null
+        gencode.vM26.annotation.velocity.86bp_flank.mtGenes.txt: !!null
+        gencode.vM26.annotation.velocity.86bp_flank.rrnaGenes.txt: !!null
+        gencode.vM26.annotation.velocity.86bp_flank.tgMap.tsv: !!null
