@@ -1,0 +1,11 @@
+Import genomic features from the file as a GRanges object ... OK
+Prepare the 'metadata' data frame ... OK
+Make the TxDb object ... OK
+'select()' returned 1:1 mapping between keys and columns
+Warning message:
+In .get_cds_IDX(mcols0$type, mcols0$phase) :
+  The "phase" metadata column contains non-NA values for features of type
+  stop_codon. This information was ignored.
+Error in (function (x)  : attempt to apply non-function
+Warning message:
+call dbDisconnect() when finished working with a connection 

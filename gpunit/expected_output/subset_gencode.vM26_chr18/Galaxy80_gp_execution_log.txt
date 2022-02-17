@@ -1,0 +1,10 @@
+# Created: Thu Feb 17 19:22:36 UTC 2022 by bhill@broadinstitute.org
+# Job: 85093    server:  https://beta.genepattern.org/gp/
+# Module: PreprocessVelocityTranscriptome urn:lsid:genepattern.org:module.analysis:00424:0.3.2
+# Parameters: 
+#    GTF = Galaxy80-Filter_on_data_79.gtf   https://beta.genepattern.org/gp/users/bhill%40broadinstitute.org/tmp/run3276654656670839730.tmp/GTF/1/Galaxy80-Filter_on_data_79.gtf
+#    Genome.FASTA = Galaxy17-faSplit_on_data_16__chr18.fasta   https://beta.genepattern.org/gp/users/bhill%40broadinstitute.org/tmp/run7144929225034101886.tmp/Genome.FASTA/2/Galaxy17-faSplit_on_data_16__chr18.fasta
+#    Insert.Size = 91
+#    Intron.Flank.Trim = 5
+#    Intron.Extraction = separate
+#    Join.Overlapping.Introns = True
