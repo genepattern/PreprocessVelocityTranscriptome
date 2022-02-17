@@ -23,5 +23,5 @@ assertions:
             diff: ../../expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.rrnaGenes.txt
         Galaxy80-Filter_on_data_79.velocity.86bp_flank.tgMap.tsv:
             diff: ../../expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.tgMap.tsv
-        Galaxy80_stderr.txt:
+        stderr.txt:
             diff: ../../expected_output/subset_gencode.vM26_chr18/Galaxy80_stderr.txt
