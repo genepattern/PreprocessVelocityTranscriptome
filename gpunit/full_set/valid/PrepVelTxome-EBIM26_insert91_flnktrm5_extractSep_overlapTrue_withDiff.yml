@@ -16,12 +16,12 @@ assertions:
         Galaxy80-Filter_on_data_79.velocity.86bp_flank.fa.gz: !!null
         Galaxy80-Filter_on_data_79.velocity.86bp_flank.gtf.gz: !!null
         Galaxy80-Filter_on_data_79.velocity.86bp_flank.features.tsv:
-            diff: ./expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.features.tsv
+            diff: ../../expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.features.tsv
         Galaxy80-Filter_on_data_79.velocity.86bp_flank.mtGenes.txt:
-            diff: ./expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.mtGenes.txt
+            diff: ../../expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.mtGenes.txt
         Galaxy80-Filter_on_data_79.velocity.86bp_flank.rrnaGenes.txt:
-            diff: ./expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.rrnaGenes.txt
+            diff: ../../expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.rrnaGenes.txt
         Galaxy80-Filter_on_data_79.velocity.86bp_flank.tgMap.tsv:
-            diff: ./expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.tgMap.tsv
+            diff: ../../expected_output/subset_gencode.vM26_chr18/Galaxy80-Filter_on_data_79.velocity.86bp_flank.tgMap.tsv
         Galaxy80_stderr.txt:
-            diff: ./expected_output/subset_gencode.vM26_chr18/Galaxy80_stderr.txt
+            diff: ../../expected_output/subset_gencode.vM26_chr18/Galaxy80_stderr.txt
