@@ -1,0 +1,14 @@
+#lsid=urn:lsid:genepattern.org:module.analysis:00424:1
+#
+name: PrepVelTxome-EBIM26_chr18_insert99_flnktrm99_extractSep_overlapTrue-INVALID
+description: EBIM26_chr18_insert99_flnktrm99_extractSep_overlapTrue
+module: PreprocessVelocityTranscriptome
+params:
+    GTF: "../../input/Galaxy80-Filter_on_data_79.gtf.gz"
+    Genome.FASTA: "../../input/Galaxy17-faSplit_on_data_16__chr18.fasta.gz"
+    Insert.Size: "99"
+    Intron.Flank.Trim: "99"
+    Intron.Extraction: "separate"
+    Join.Overlapping.Introns: "TRUE"
+assertions:
+ jobStatus: error

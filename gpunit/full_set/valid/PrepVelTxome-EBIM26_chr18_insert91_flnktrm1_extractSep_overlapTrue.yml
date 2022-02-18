@@ -1,0 +1,21 @@
+#lsid=urn:lsid:genepattern.org:module.analysis:00424:0.1.7
+#
+name: PrepVelTxome-EBIM26_insert91_flnktrm1_extractSep_overlapTrue
+description: EBIM26_insert91_flnktrm1_extractSep_overlapTrue
+module: PreprocessVelocityTranscriptome
+params:
+    GTF: "../../input/Galaxy80-Filter_on_data_79.gtf.gz"
+    Genome.FASTA: "../../input/Galaxy17-faSplit_on_data_16__chr18.fasta.gz"
+    Insert.Size: "91"
+    Intron.Flank.Trim: "1"
+    Intron.Extraction: "separate"
+    Join.Overlapping.Introns: "TRUE"
+assertions:
+    jobStatus: success
+    files:
+        Galaxy80-Filter_on_data_79.velocity.86bp_flank.fa.gz: !!null
+        Galaxy80-Filter_on_data_79.velocity.86bp_flank.gtf.gz: !!null
+        Galaxy80-Filter_on_data_79.velocity.86bp_flank.features.tsv: !!null
+        Galaxy80-Filter_on_data_79.velocity.86bp_flank.mtGenes.txt: !!null
+        Galaxy80-Filter_on_data_79.velocity.86bp_flank.rrnaGenes.txt: !!null
+        Galaxy80-Filter_on_data_79.velocity.86bp_flank.tgMap.tsv: !!null
