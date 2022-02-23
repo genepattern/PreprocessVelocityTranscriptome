@@ -13,16 +13,16 @@ params:
 assertions:
     jobStatus: success
     files:
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.fa.gz: !!null
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.gtf.gz: !!null
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.features.tsv:
-            diff: ./expected_output/gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.features.tsv
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.mtGenes.txt:
-            diff: ./expected_output/gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.mtGenes.txt
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.rrnaGenes.txt:
-            diff: ./expected_output/gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.rrnaGenes.txt
-        gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.tgMap.tsv:
-            diff: ./expected_output/gencode.vM26.primary_assembly.annotation.velocity.93bp_flank.tgMap.tsv
+        gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.fa.gz: !!null
+        gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.gtf.gz: !!null
+        gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.features.tsv:
+            diff: ./expected_output/gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.features.tsv
+        gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.mtGenes.txt:
+            diff: ./expected_output/gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.mtGenes.txt
+        gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.rrnaGenes.txt:
+            diff: ./expected_output/gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.rrnaGenes.txt
+        gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.tgMap.tsv:
+            diff: ./expected_output/gencode.vM26.primary_assembly.annotation.velocity.86bp_flank.tgMap.tsv
         stderr.txt:
             diff: ./expected_output/stderr.txt
 

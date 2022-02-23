@@ -13,9 +13,9 @@ params:
 assertions:
     jobStatus: success
     files:
-        Galaxy80-Filter_on_data_79.velocity.86bp_flank.fa.gz: !!null
-        Galaxy80-Filter_on_data_79.velocity.86bp_flank.gtf.gz: !!null
-        Galaxy80-Filter_on_data_79.velocity.86bp_flank.features.tsv: !!null
-        Galaxy80-Filter_on_data_79.velocity.86bp_flank.mtGenes.txt: !!null
-        Galaxy80-Filter_on_data_79.velocity.86bp_flank.rrnaGenes.txt: !!null
-        Galaxy80-Filter_on_data_79.velocity.86bp_flank.tgMap.tsv: !!null
+        Galaxy80-Filter_on_data_79.velocity.90bp_flank.fa.gz: !!null
+        Galaxy80-Filter_on_data_79.velocity.90bp_flank.gtf.gz: !!null
+        Galaxy80-Filter_on_data_79.velocity.90bp_flank.features.tsv: !!null
+        Galaxy80-Filter_on_data_79.velocity.90bp_flank.mtGenes.txt: !!null
+        Galaxy80-Filter_on_data_79.velocity.90bp_flank.rrnaGenes.txt: !!null
+        Galaxy80-Filter_on_data_79.velocity.90bp_flank.tgMap.tsv: !!null

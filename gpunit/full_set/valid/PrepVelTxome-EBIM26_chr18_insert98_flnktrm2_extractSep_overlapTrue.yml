@@ -4,8 +4,8 @@ name: PrepVelTxome-EBIM26_chr18_insert98_flnktrm2_extractSep_overlapTrue
 description: EBIM26_chr18_insert98_flnktrm2_extractSep_overlapTrue
 module: PreprocessVelocityTranscriptome
 params:
-    GTF: "../../input/Galaxy80-Filter_on_data_79.gtf.gz"
-    Genome.FASTA: "../../input/Galaxy17-faSplit_on_data_16__chr18.fasta.gz"
+    GTF: "../../input/GGalaxy80-Filter_on_data_79.gtf.gz"
+    Genome.FASTA: "../../input/GGalaxy17-faSplit_on_data_16__chr18.fasta.gz"
     Insert.Size: "98"
     Intron.Flank.Trim: "2"
     Intron.Extraction: "separate"
@@ -13,9 +13,9 @@ params:
 assertions:
     jobStatus: success
     files:
-        alaxy80-Filter_on_data_79.velocity.96bp_flank.fa.gz: !!null
-        alaxy80-Filter_on_data_79.velocity.96bp_flank.gtf.gz: !!null
-        alaxy80-Filter_on_data_79.velocity.96bp_flank.features.tsv: !!null
-        alaxy80-Filter_on_data_79.velocity.96bp_flank.mtGenes.txt: !!null
-        alaxy80-Filter_on_data_79.velocity.96bp_flank.rrnaGenes.txt: !!null
-        alaxy80-Filter_on_data_79.velocity.96bp_flank.tgMap.tsv: !!null
+        Galaxy80-Filter_on_data_79.velocity.96bp_flank.fa.gz: !!null
+        Galaxy80-Filter_on_data_79.velocity.96bp_flank.gtf.gz: !!null
+        Galaxy80-Filter_on_data_79.velocity.96bp_flank.features.tsv: !!null
+        Galaxy80-Filter_on_data_79.velocity.96bp_flank.mtGenes.txt: !!null
+        Galaxy80-Filter_on_data_79.velocity.96bp_flank.rrnaGenes.txt: !!null
+        Galaxy80-Filter_on_data_79.velocity.96bp_flank.tgMap.tsv: !!null
