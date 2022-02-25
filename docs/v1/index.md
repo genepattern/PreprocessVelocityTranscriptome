@@ -53,7 +53,7 @@ Genome FASTA: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_mouse/release_
 
 **Module Language**: R 4.0.5, eisaR 1.2.0 \
 **Source Repository**: [https://github.com/genepattern/PreprocessVelocityTranscriptome/releases/tag/v1](https://github.com/genepattern/PreprocessVelocityTranscriptome/releases/tag/v1) \
-**Docker image**: genepattern/prepvelocitytxome:1
+**Docker image**: [genepattern/prepvelocitytxome:1](https://hub.docker.com/layers/190868095/genepattern/prepvelocitytxome/v1/images/sha256-06acd977c3aaa921379607daddd8dfbc7972400638946d09b219a1870867ea4b?context=repo)
 
 | **Version** | **Comment**      |
 |-------------|------------------|

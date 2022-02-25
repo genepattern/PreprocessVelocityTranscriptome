@@ -1,7 +1,7 @@
 #PreprocessVelocityTranscriptome
 #Thu Feb 17 22:22:26 UTC 2022
 JVMLevel=
-LSID=urn\:lsid\:genepattern.org\:module.analysis\:00424\:0.3.2
+LSID=urn\:lsid\:genepattern.org\:module.analysis\:00424\:1
 author=Anthony S. Castanza;UCSD-MesirovLab
 categories=preprocess & utilities;single-cell;singlecell
 commandLine=Rscript /module/txome.for.velocity.R --gtf <GTF> --genome <Genome.FASTA> --length <Insert.Size> --trim <Intron.Flank.Trim> --type <Intron.Extraction> --join <Join.Overlapping.Introns>
@@ -99,8 +99,8 @@ p6_value=TRUE\=True;FALSE\=False
 privacy=public
 publicationDate=02/08/2022 14\:39 
 quality=preproduction
-src.repo=https\://github.com/genepattern/PreprocessVelocityTranscriptome/tree/develop
+src.repo=https\://github.com/genepattern/PreprocessVelocityTranscriptome/tree/v1
 taskDoc=
 taskType=preprocess & utilities
 userid=acastanza
-version=update file extensions for fasta
+version=initial release
