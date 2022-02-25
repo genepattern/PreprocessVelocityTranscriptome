@@ -1,15 +1,18 @@
 #PreprocessVelocityTranscriptome
-#Wed Nov 10 20:29:43 UTC 2021
+#Thu Feb 17 22:22:26 UTC 2022
 JVMLevel=
-LSID=urn:lsid:genepattern.org:module.analysis:00424
+LSID=urn\:lsid\:genepattern.org\:module.analysis\:00424\:1
 author=Anthony S. Castanza;UCSD-MesirovLab
 categories=preprocess & utilities;single-cell;singlecell
-commandLine=<Rscript> <libdir>txome.for.velocity.R --gtf <GTF> --genome <Genome.FASTA> --length <Insert.Size> --trim <Intron.Flank.Trim> --type <Intron.Extraction> --join <Join.Overlapping.Introns>
+commandLine=Rscript /module/txome.for.velocity.R --gtf <GTF> --genome <Genome.FASTA> --length <Insert.Size> --trim <Intron.Flank.Trim> --type <Intron.Extraction> --join <Join.Overlapping.Introns>
 cpuType=any
 description=Extract transcript and intron sequences from the genome sequence using the eisaR package in order to quantify both intronic (unprocessed) and exonic (processed) RNA abundances in each cell with alevin.<br>A necessary preprocessing step to enable RNA velocity analysis.
-documentationUrl=
+documentationUrl=https\://genepattern.github.io/PreprocessVelocityTranscriptome/v1/
 fileFormat=fa;gtf;tsv
-job.docker.image=jupyter/datascience-notebook\:r-4.0.3
+job.cpuCount=
+job.docker.image=genepattern/prepvelocitytxome\:v1
+job.memory=6Gb
+job.walltime=
 language=any
 name=PreprocessVelocityTranscriptome
 os=any
@@ -30,7 +33,7 @@ p2_MODE=IN
 p2_TYPE=FILE
 p2_default_value=
 p2_description=A FASTA file of the genomic sequence corresponding to the organism's GTF file.
-p2_fileFormat=.fa.gz;fa;fa.gz
+p2_fileFormat=.fa.gz;fa;fa.gz;FASTA;fasta;fasta.gz
 p2_flag=--genome
 p2_name=Genome.FASTA
 p2_numValues=1..1
@@ -94,9 +97,10 @@ p6_prefix_when_specified=
 p6_type=java.lang.String
 p6_value=TRUE\=True;FALSE\=False
 privacy=public
-quality=development
-src.repo=
-taskDoc=PreprocessVelocityTranscriptome.pdf
+publicationDate=02/08/2022 14\:39 
+quality=preproduction
+src.repo=https\://github.com/genepattern/PreprocessVelocityTranscriptome/tree/v1
+taskDoc=
 taskType=preprocess & utilities
 userid=acastanza
-version=
+version=initial release
